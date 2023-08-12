@@ -2,7 +2,7 @@
 FROM python:3
 
 # Set the working directory inside the container
-WORKDIR /Gapminder
+WORKDIR /app
 
 # Copy the requirements file into the container
 COPY requirements.txt .
@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Execute the application when the container starts
-CMD ["python", "test.py"]
+CMD ["python", "API_test.py"]
