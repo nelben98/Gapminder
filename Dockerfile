@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Execute the application when the container starts
-CMD ["python", "API_test.py"]
+CMD ["python", "HealthGov.py"]
