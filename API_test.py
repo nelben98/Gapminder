@@ -1,3 +1,4 @@
+#%%
 import requests
 import pandas as pd
 
@@ -23,6 +24,14 @@ if response.status_code == 200:
     df = pd.DataFrame(resources)
     
     # Display the DataFrame
-    print('This is df2, let''s compare!:\n',df)
+    print('Resources data from health gov:\n',df)
 else:
     print('Error in the request:', response.status_code)
+
+# %%
+pd.set_option('display.max_columns', None) #Display all columns
+# %%
+print(df.head())
+# %%
+df.describe()
+# %%
